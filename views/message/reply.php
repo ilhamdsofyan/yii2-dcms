@@ -1,0 +1,39 @@
+<?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model docotel\dcms\models\Message */
+
+$this->title = Yii::t('rbac-dcms', 'Create Message');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rbac-dcms', 'Messages'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+$this->registerJs($this->render('_create.js'));
+
+$act = Yii::$app->controller->action->id;
+?>
+<section class="panel">
+    <div class="panel-body">
+        <div class="message-create">
+            <div class="row">
+                <div class="col-md-3">
+                    <?php
+                        echo $this->render('_left', [
+                            'act' => $act,
+                            'count' => $count,
+                            'count_new' => $count_new,
+                            'count_message' => $count_message,
+                        ]);
+                    ?>
+                </div>
+                <div class="col-md-9">
+                    <?php
+                        echo $this->render('_form_reply', [
+                            'model' => $model,
+                        ]);
+                    ?>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
