@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 ?>
 <li class="dd-item" data-id="<?php echo $menu->menu_id?>">
-    <button class="pull-right btn btn-success btn-xs fa fa-chevron-down pull-right" aria-hidden="true" data-toggle="collapse" href="#item-menu-<?php echo $menu->menu_id?>" aria-expanded="true" aria-controls="item-menu-<?php echo $menu->menu_id?>"></button>
+    <button type="button" class="pull-right btn btn-success btn-xs fa fa-chevron-down pull-right" aria-hidden="true" data-toggle="collapse" href="#item-menu-<?php echo $menu->menu_id?>" aria-expanded="true" aria-controls="item-menu-<?php echo $menu->menu_id?>"></button>
     <div class="dd-handle">
         <div class=" panel panel-success">
             <div class="handle-head panel-heading"><?php echo $menu->label?> <span class="pull-right"><i>(<?php echo $menu->menu_url?>)</i></span> </div>
